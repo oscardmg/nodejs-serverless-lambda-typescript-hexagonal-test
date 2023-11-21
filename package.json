@@ -1,0 +1,20 @@
+{
+  "name": "nodejs-serverless-lambda-typescript-hexagonal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serverless offline"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.126",
+    "esbuild": "^0.19.7",
+    "serverless": "^3.37.0",
+    "serverless-esbuild": "^1.49.0",
+    "serverless-offline": "^13.3.0",
+    "typescript": "^5.3.2"
+  }
+}
