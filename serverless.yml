@@ -7,6 +7,13 @@ provider:
   runtime: nodejs18.x
   stage: ${opt:stage, 'develop'}
   region: ${opt:region, 'us-east-1'}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+          Resource: !GetAtt StockTable.Arn
 
 functions:
   stockValues:

@@ -10,7 +10,7 @@ export class CurrencyService implements ICurrencyService {
   
   async getCurrencies(symbols: string[]): Promise<Currency> {
 
-      const getCurr = await axios.get(`${ENDPOINT}symbols=${symbols.join(',')}&base=${BASE}`, {headers: {'appKey': process.env.API_KEY}})
+      const getCurr = await axios.get(`${ENDPOINT}symbols=${symbols.join(',')}&base=${BASE}`, {headers: {'apikey': process.env.API_KEY}})
       return getCurr.data
   }
  

@@ -3,9 +3,15 @@ import { IStockRepository } from '../domain/interfaces/stockRepository';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, GetCommand } from '@aws-sdk/lib-dynamodb';
 
-const DB_TABLE = process.env.DB_TABLE;
+console.log("🚀 ~ process.env:6 ~ ", process.env);
 
-const client = new DynamoDBClient({});
+
+const DB_TABLE = process.env.IS_OFFLINE ? 'hexagonal-architecture-example-develop' : process.env.DB_TABLE;
+console.log("🚀 ~ file: stockRepository.ts:7 ~ DB_TABLE:", DB_TABLE)
+
+
+
+const client = new DynamoDBClient({ region: 'us-east-1'});
 const docClient = DynamoDBDocumentClient.from(client);
 
 export class StockRepository implements IStockRepository {
@@ -24,7 +30,7 @@ export class StockRepository implements IStockRepository {
       if(!stockData.Item) {
         throw new Error('Stock not found');
       }
-      
+
       return {
         STOCK_ID: stockData.Item.STOCK_ID,
         VALUE: stockData.Item.VALUE,
