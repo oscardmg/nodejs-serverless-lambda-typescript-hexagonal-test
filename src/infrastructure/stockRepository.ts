@@ -1,5 +1,5 @@
 import { Stock } from '../domain/entities/stock';
-import { IStockRepository } from '../domain/interfaces/stockRepository';
+import { IStockRepository } from '../domain/repositories/stockRepository';
 import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
 import { DynamoDBDocumentClient, GetCommand } from '@aws-sdk/lib-dynamodb';
 

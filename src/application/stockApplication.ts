@@ -1,7 +1,7 @@
 import { Stock } from "../domain/entities/stock";
 import { StockWithCurrencies } from "../domain/entities/stockWithCurrencies";
-import { ICurrencyService } from "../domain/interfaces/currencyService";
-import { IStockRepository } from "../domain/interfaces/stockRepository";
+import { ICurrencyService } from "../domain/services/currencyService";
+import { IStockRepository } from "../domain/repositories/stockRepository";
 
 
 

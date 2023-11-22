@@ -1,5 +1,5 @@
 import { Currency } from "../domain/entities/currency";
-import { ICurrencyService } from "../domain/interfaces/currencyService";
+import { ICurrencyService } from "../domain/services/currencyService";
 import axios from 'axios';
 
 

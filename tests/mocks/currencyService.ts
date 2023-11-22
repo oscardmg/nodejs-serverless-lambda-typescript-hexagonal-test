@@ -1,5 +1,5 @@
 import { Currency } from "../../src/domain/entities/currency";
-import { ICurrencyService } from "../../src/domain/interfaces/currencyService";
+import { ICurrencyService } from "../../src/domain/services/currencyService";
 import { CurrencyMother } from "./objectMother/currency";
 
 // mock 
