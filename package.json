@@ -18,5 +18,10 @@
     "serverless-offline": "^13.3.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.454.0",
+    "@aws-sdk/lib-dynamodb": "^3.454.0",
+    "axios": "^1.6.2"
   }
 }
