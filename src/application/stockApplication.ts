@@ -1,7 +1,6 @@
-import { Stock } from "../domain/entities/stock";
 import { StockWithCurrencies } from "../domain/entities/stockWithCurrencies";
-import { ICurrencyService } from "../domain/interfaces/currencyService";
-import { IStockRepository } from "../domain/interfaces/stockRepository";
+import { ICurrencyService } from "../domain/services/currencyService";
+import { IStockRepository } from "../domain/repositories/stockRepository";
 
 
 
@@ -11,9 +10,9 @@ export class StockApplication {
   private readonly currencies = ['USD', 'ARS', 'COP'];
 
 
-  constructor(currencyPort: ICurrencyService, stockPort: IStockRepository) {
-    this.currencyService = currencyPort;
-    this.stockRepository = stockPort;
+  constructor(currencyService: ICurrencyService, stockRepository: IStockRepository) {
+    this.currencyService = currencyService;
+    this.stockRepository = stockRepository;
   }
 
   public async getStock(stockId: string): Promise<StockWithCurrencies> {

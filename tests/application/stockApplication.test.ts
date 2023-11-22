@@ -1,6 +1,6 @@
 import { StockApplication } from '../../src/application/stockApplication';
-import { ICurrencyService } from '../../src/domain/interfaces/currencyService';
-import { IStockRepository } from '../../src/domain/interfaces/stockRepository';
+import { ICurrencyService } from '../../src/domain/services/currencyService';
+import { IStockRepository } from '../../src/domain/repositories/stockRepository';
 import { CurrencyServiceMock } from '../mocks/currencyService';
 import { StockRepositoryMock } from '../mocks/stockRepository';
 import { StockWithCurrenciesMother } from '../mocks/objectMother/stockWithCurrencies';

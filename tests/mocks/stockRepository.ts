@@ -1,5 +1,5 @@
 import { Stock } from "../../src/domain/entities/stock";
-import { IStockRepository } from "../../src/domain/interfaces/stockRepository"; 
+import { IStockRepository } from "../../src/domain/repositories/stockRepository"; 
 import { StockMother } from "./objectMother/stock";
 
 
